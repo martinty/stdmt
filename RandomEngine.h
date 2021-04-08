@@ -37,7 +37,7 @@ class RandomEngine {
     void discard(unsigned int n = 1) { engine.discard(n); }
     unsigned int getMax() const { return engine.max(); }
     unsigned int getMin() const { return engine.min(); }
-    unsigned int rand() { return engine(); }
+    unsigned int getRand() { return engine(); }
     char getRandChar(char from, char to) {
         float fTmp = static_cast<float>(engine()) / intRange;
         return (fTmp * (to - from + 1)) + from;
