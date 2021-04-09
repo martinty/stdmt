@@ -1,6 +1,6 @@
 # stdmt
 
-Useful C++ classes and functionality.
+> Useful C++ classes and functionality.
 
 Every class and function are placed inside `namespace stdmt`. For usage only the header files are needed. Examples are given as comments in the header files and in *main.cpp*.
 
