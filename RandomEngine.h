@@ -14,6 +14,7 @@
 //     cout << "Random number: " << re.rand() << "\n";
 // }
 
+#include <cassert>
 #include <ctime>
 #include <random>
 
@@ -39,30 +40,37 @@ class RandomEngine {
     unsigned int getMin() const { return engine.min(); }
     unsigned int getRand() { return engine(); }
     char getRandChar(char from, char to) {
+        assert(from < to);
         float fTmp = static_cast<float>(engine()) / intRange;
         return (fTmp * (to - from + 1)) + from;
     }
     unsigned char getRandUchar(unsigned char from, unsigned char to) {
+        assert(from < to);
         float fTmp = static_cast<float>(engine()) / intRange;
         return (fTmp * (to - from + 1)) + from;
     }
     int getRandInt(int from, int to) {
+        assert(from < to);
         float fTmp = static_cast<float>(engine()) / intRange;
         return (fTmp * (to - from + 1)) + from;
     }
     unsigned int getRandUint(unsigned int from, unsigned int to) {
+        assert(from < to);
         float fTmp = static_cast<float>(engine()) / intRange;
         return (fTmp * (to - from + 1)) + from;
     }
     size_t getRandSize_t(size_t from, size_t to) {
+        assert(from < to);
         float fTmp = static_cast<float>(engine()) / intRange;
         return (fTmp * (to - from + 1)) + from;
     }
     float getRandFloat(float from, float to) {
+        assert(from < to);
         float fTmp = static_cast<float>(engine()) / engine.max();
         return (fTmp * (to - from)) + from;
     }
     double getRandDouble(double from, double to) {
+        assert(from < to);
         double fTmp = static_cast<float>(engine()) / engine.max();
         return (fTmp * (to - from)) + from;
     }
