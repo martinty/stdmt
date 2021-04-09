@@ -25,10 +25,13 @@ class Walltime {
     Walltime() = default;
     ~Walltime() = default;
 
+    // start() also restart the timer
     void start() {
         duration = 0;
         startTime = std::chrono::steady_clock::now();
     }
+
+    // Update duration. Can stack multiple stop() after each other
     void stop() {
         const auto endTime = std::chrono::steady_clock::now();
         const auto diffTime =
