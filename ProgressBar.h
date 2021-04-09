@@ -13,6 +13,7 @@
 //     }
 // }
 
+#include <cassert>
 #include <ostream>
 #include <string>
 
@@ -47,7 +48,7 @@ class ProgressBar {
             std::cout << std::string(scale - symbols, '*') << std::endl;
             valid = false;
         } else {
-            unsigned int p = (progress / rangeDouble) * scale;
+            size_t p = (progress / rangeDouble) * scale;
             if (p > symbols) {
                 std::cout << std::string(p - symbols, '*') << std::flush;
                 symbols = p;
@@ -61,16 +62,17 @@ class ProgressBar {
     ProgressBar(int r) : ProgressBar{static_cast<size_t>(r)} {};
     ProgressBar(unsigned int r) : ProgressBar{static_cast<size_t>(r)} {};
     ~ProgressBar() = default;
-    void move(size_t n) {
-        pre(n);
+    void moveTo(size_t n) {
+        assert(n > 0);
+        pre(n - 1);
         if (valid) {
-            progress = n + 1;
+            progress = n;
             post();
         }
     }
-    void advance(size_t n) { move(progress + n - 1); }
-    void operator++() { move(progress); }
-    void operator++(int) { move(progress); }
+    void advance(size_t n) { moveTo(progress + n); }
+    void operator++() { moveTo(progress + 1); }
+    void operator++(int) { moveTo(progress + 1); }
     bool isValid() const { return valid; }
     size_t getRange() const { return range; }
     size_t getProgress() const { return progress; }
