@@ -42,7 +42,19 @@ class RandomEngine {
         float fTmp = static_cast<float>(engine()) / intRange;
         return (fTmp * (to - from + 1)) + from;
     }
+    unsigned char getRandUchar(unsigned char from, unsigned char to) {
+        float fTmp = static_cast<float>(engine()) / intRange;
+        return (fTmp * (to - from + 1)) + from;
+    }
     int getRandInt(int from, int to) {
+        float fTmp = static_cast<float>(engine()) / intRange;
+        return (fTmp * (to - from + 1)) + from;
+    }
+    unsigned int getRandUint(unsigned int from, unsigned int to) {
+        float fTmp = static_cast<float>(engine()) / intRange;
+        return (fTmp * (to - from + 1)) + from;
+    }
+    size_t getRandSize_t(size_t from, size_t to) {
         float fTmp = static_cast<float>(engine()) / intRange;
         return (fTmp * (to - from + 1)) + from;
     }
@@ -51,7 +63,7 @@ class RandomEngine {
         return (fTmp * (to - from)) + from;
     }
     double getRandDouble(double from, double to) {
-        float fTmp = static_cast<float>(engine()) / engine.max();
+        double fTmp = static_cast<float>(engine()) / engine.max();
         return (fTmp * (to - from)) + from;
     }
 };
