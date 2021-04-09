@@ -68,6 +68,7 @@ class ProgressBar {
             post();
         }
     }
+    void advance(size_t n) { move(progress + n - 1); }
     void operator++() { move(progress); }
     void operator++(int) { move(progress); }
     bool isValid() const { return valid; }
