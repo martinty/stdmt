@@ -23,7 +23,7 @@ class Walltime {
     double duration = 0;
 
    public:
-    Walltime() { startTime = std::chrono::steady_clock::now(); }
+    Walltime() : startTime{std::chrono::steady_clock::now()} {}
     ~Walltime() = default;
 
     // start() also restart the timer
