@@ -26,19 +26,21 @@ class Walltime {
     Walltime() : startTime{std::chrono::steady_clock::now()} {}
     ~Walltime() = default;
 
-    // start() also restart the timer
+    // start() also restart the timer.
     void start() {
         duration = 0;
         startTime = std::chrono::steady_clock::now();
     }
 
-    // Update duration. Can stack multiple stop() after each other
-    void stop() {
+    // Update duration. Can stack multiple stop() after each other.
+    // Also return duration if value is needed (saves a line).
+    double stop() {
         const auto endTime = std::chrono::steady_clock::now();
         const auto diffTime =
             std::chrono::duration_cast<std::chrono::milliseconds>(endTime -
                                                                   startTime);
         duration = diffTime.count() / 1000.0;
+        return duration;
     }
     double getDuration() const { return duration; }
 };
