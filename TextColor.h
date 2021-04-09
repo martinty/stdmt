@@ -1,8 +1,8 @@
 #pragma once
 
-// Martin Tysseland - 08.04.2021
-// Class for changing the text color in the terminal (windows and Linux).
-// NB!: Only for windows: TextColor.h" allways needs to be included over
+// Martin Tysseland - 09.04.2021
+// Class for changing the text color in the terminal (Windows and Linux).
+// NB!: Only for windows: "TextColor.h" allways needs to be included over
 // "std_lib_facilities.h".
 // This example will print the text in blue and change it back to white after:
 // {

@@ -3,7 +3,7 @@
 // Inspired by CMB (Climbing Mont Blanc)
 // https://climb.idi.ntnu.no/#/howto
 //
-// Martin Tysseland - 08.04.2021
+// Martin Tysseland - 09.04.2021
 // Class to generate random numbers using std::subtract_with_carry_engine
 // http://www.cplusplus.com/reference/random/subtract_with_carry_engine/
 // Examples:

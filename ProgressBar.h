@@ -1,6 +1,9 @@
 #pragma once
 
-// Martin Tysseland - 08.04.2021
+// Insipred by class progress_display in Boost 1.75
+// https://www.boost.org/doc/libs/1_75_0/libs/timer/doc/original_timer.html#Class%20progress_display
+//
+// Martin Tysseland - 09.04.2021
 // Class to show simple progress bar in terminal
 // Can not print anything else in terminal when in porgress
 // Example:

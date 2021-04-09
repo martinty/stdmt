@@ -1,6 +1,6 @@
 #pragma once
 
-// Martin Tysseland - 08.04.2021
+// Martin Tysseland - 09.04.2021
 // Class to calculate walltime duration
 // Timer also start when object is constructed
 // Example:
