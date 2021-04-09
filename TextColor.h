@@ -72,7 +72,7 @@ class TextColor {
 #endif
 
    public:
-    TextColor(ColorId c = ColorId::white) : color((int)c) {
+    TextColor(ColorId c = ColorId::white) : color{(int)c} {
 #ifdef _WIN32
         hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 #endif
