@@ -13,7 +13,7 @@
 //     }
 // }
 
-#include <iostream>
+#include <ostream>
 #include <string>
 
 namespace stdmt {

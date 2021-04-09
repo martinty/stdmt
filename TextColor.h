@@ -22,7 +22,7 @@
 #include <windows.h>
 #endif
 
-#include <iostream>
+#include <ostream>
 
 namespace stdmt {
 
