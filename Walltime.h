@@ -2,6 +2,7 @@
 
 // Martin Tysseland - 08.04.2021
 // Class to calculate walltime duration
+// Timer also start when object is constructed
 // Example:
 // {
 //     Walltime wt;
@@ -22,7 +23,7 @@ class Walltime {
     double duration = 0;
 
    public:
-    Walltime() = default;
+    Walltime() { startTime = std::chrono::steady_clock::now(); }
     ~Walltime() = default;
 
     // start() also restart the timer
