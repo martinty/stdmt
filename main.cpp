@@ -5,6 +5,7 @@
 #include "RandomEngine.h"
 #include "TextColor.h"
 #include "Walltime.h"
+#include "utilities_stdmt.h"
 
 using namespace std;
 using namespace stdmt;
@@ -16,7 +17,7 @@ int main() {
     // Testing walltime and progress bar
     Walltime wt;
     wt.start();
-    const int N = 100'000'000;
+    const int N = 20'000'000;
     ProgressBar pb{N};
     vector<int> vec;
     for (int i = 0; i < N; i++) {
@@ -27,7 +28,7 @@ int main() {
     cout << wt << "\n";
 
     // Testing random numbers
-    const int M = 5;
+    const int M = 2;
     RandomEngine re;
     for (int i = 0; i < M; i++) {
         cout << "Random int [2, 7]: " << re.getRandInt(2, 7) << "\n";
@@ -35,6 +36,10 @@ int main() {
     for (int i = 0; i < M; i++) {
         cout << "Random char ['a', 'e']: " << re.getRandChar('a', 'e') << "\n";
     }
+
+    // Test input from user
+    string str = getInput(string{"A"}, string{"zzzz"});
+    cout << str << endl;
 
     return 0;
 }
