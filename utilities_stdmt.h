@@ -24,13 +24,14 @@ T getInput(T lower, T upper) {
     for (;;) {
         std::cout << "Input: ";
         std::cin >> input;
-        if (std::cin && input >= lower && input <= upper) break;
+        if (std::cin && input >= lower && input <= upper) {
+            std::cin.ignore(256, '\n');
+            return input;
+        }
         std::cin.clear();
         std::cin.ignore(256, '\n');
         std::cout << "Incorrect input, try again!\n";
     }
-    std::cin.ignore(256, '\n');
-    return input;
 }
 
 inline int getInputIntV2(int lower = INT_MIN, int upper = INT_MAX) {
