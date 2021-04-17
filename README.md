@@ -10,7 +10,7 @@ Classes:
 - `TextColor`: Give the text printed in terminal color. Only implementet for Windows and Linux.
 - `Walltime`: Simple timer.
 
-Useful function:
+Useful functions:
 - `utilities_stdmt.h`
 
 All of the code is based on the C++ Standard Library
