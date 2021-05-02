@@ -19,10 +19,10 @@
 namespace stdmt {
 
 template <typename T>
-T getInput(T lower, T upper) {
+T getInput(T lower, T upper, std::string msg = "Input") {
     T input;
     for (;;) {
-        std::cout << "Input: ";
+        std::cout << msg << " [" << lower << ", " << upper << "]: ";
         std::cin >> input;
         if (std::cin && input >= lower && input <= upper) {
             std::cin.ignore(256, '\n');

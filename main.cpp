@@ -38,7 +38,7 @@ int main() {
     }
 
     // Test input from user
-    string str = getInput(string{"A"}, string{"zzzz"});
+    string str = getInput(string{"A"}, string{"zzzz"}, "String input");
     cout << str << endl;
 
     return 0;
