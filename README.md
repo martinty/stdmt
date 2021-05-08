@@ -19,3 +19,19 @@ All of the code is based on the C++ Standard Library
 Other great C++ libraries:
 - [Boost](https://www.boost.org/)
 - [Eigen](https://eigen.tuxfamily.org/index.php?title=Main_Page)
+
+---
+
+Git Tools - Submodules
+https://git-scm.com/book/en/v2/Git-Tools-Submodules
+
+```
+# Add submodule
+git submodule add https://github.com/martinty/stdmt.git
+git add .
+git commit -m "Add submodule stdmt"
+git push origin master
+
+# Update submodule to latest commit
+git submodule update --remote
+```
