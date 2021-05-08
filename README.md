@@ -9,6 +9,7 @@ Classes:
 - `RandomEngine`: Generate random numbers in wanted range.
 - `TextColor`: Give the text printed in terminal color. Only implementet for Windows and Linux.
 - `Walltime`: Simple timer.
+- `bitmap_image`:  [C++ Bitmap Library](http://www.partow.net/programming/bitmap/index.html)
 
 Useful functions:
 - `utilities_stdmt.h`
